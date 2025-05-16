@@ -15,6 +15,7 @@ router.post(
 
 router.get("/", galleryController.getAllGalleryItems);
 router.get("/:id", galleryController.getGalleryItemById);
+router.get("/type/:type", galleryController.getGalleryItemsByType);
 router.put(
   "/:id",
   authenticateToken,

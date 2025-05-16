@@ -50,7 +50,19 @@ exports.getGalleryItemById = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
-
+// Get all gallery items by type
+exports.getGalleryItemsByType = async (req, res) => {
+  try {
+    const { type } = req.params;
+    const galleryItems = await Gallery.findAll({
+      where: { type },
+      order: [["id", "DESC"]],
+    });
+    res.json(galleryItems);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
 // Update a gallery item
 exports.updateGalleryItem = async (req, res) => {
   try {

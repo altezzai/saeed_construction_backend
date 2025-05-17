@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "",
-    "database": "saeed_constraction",
+    "database": "saeed_construction",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
